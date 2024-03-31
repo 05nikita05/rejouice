@@ -635,20 +635,34 @@ i{
      height: 40%;
   }
   #page5{
-    max-height: 50%;
+    min-height: 25%;
+  }
+  #page5 .page5-element{
+    height: 40vh;
   }
   #page6{
     min-height: 60%;
   }
+  #page6 .page6-top{
+    min-height: 5vh;
+  }
   #page6 .endElement-part3{
-    height: 40%;
-    color: #fff;
+    height: 20vh;
+    display: flex;
+    align-items: flex-end;
+  }
+  .endElement-part1{
+    margin-bottom: 10vw;
   }
   .endElement-part3 h1{
-    color: #fff;
-    opacity: 5;
-    font-size: 22vw;
+    width: 100%;
+    z-index: 9999;
+    color: white;
+    font-size: 26vw;
+    
   }
+  
+
 }
 
 
