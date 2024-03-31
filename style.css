@@ -1,11 +1,11 @@
-@font-face {
+/* @font-face {
   font-family: nb;
   src: url(./NBInternationalProBoo\ \(1\).woff2);
 }
 @font-face {
   font-family: rejouice;
   src: url(./Rejouice-Headline\ \(1\).woff2);
-}
+} */
 /* for use--- */
 @font-face {
   font-family: nb;
@@ -400,6 +400,7 @@ nav h4:hover::after{
   animation-iteration-count:infinite;
   transition: linear .5s;
   margin-right: 2vw;
+  background-color: #fff;
 }
 ::-webkit-scrollbar{
   display: none;
@@ -454,10 +455,11 @@ nav h4:hover::after{
   position: relative;
 }
 .page6-border{
-  width: 22%;
+  width: 20%;
   height: 1.5px;
   background-color: #000;
   transition: width 0.3s,background-color 0.3s;
+  text-align: center;
 }
 
 .page6-endElement{
