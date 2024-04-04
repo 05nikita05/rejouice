@@ -157,6 +157,7 @@ nav h4:hover::after{
 }
 .elem {
   padding: 3vw 0;
+  line-height: 1.07;
 
 }
 .elem div {
@@ -325,6 +326,32 @@ nav h4:hover::after{
   position: absolute;
   
 }
+.svgTextContainer{
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.svgText{
+  position: absolute;
+  height: max-content;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.svgText-part1{
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  font-size: 3vw;
+}
+.svgText-part1 h2{
+  font-size: 4vw;
+}
 #cursor2 {
   height: 7vw;
   width: 7vw;
@@ -350,7 +377,7 @@ nav h4:hover::after{
   background-color: #fff;
 }
 #page5 .elem{
-  padding: 2vw 0
+  padding: 2vw 0;
 }
 .page5-element{
   margin-top: 10vw;
@@ -364,7 +391,8 @@ nav h4:hover::after{
   justify-content: end;
   padding: 1.5vw 0;
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.537);
-  margin:0 2vw
+  margin:0 2vw;
+  /* background-color: violet; */
 }
 #page5-part1 h4{
   font-size: 2vw;
@@ -400,20 +428,20 @@ nav h4:hover::after{
   animation-iteration-count:infinite;
   transition: linear .5s;
   margin-right: 2vw;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 ::-webkit-scrollbar{
   display: none;
 }
-.page5-part2 .page5-images{
-  width: 25vw;
+.page5-images{
+  width: 30vw;
   overflow: hidden;
   flex-shrink: 0;
-  position: absolute;
+  /* position: absolute; */
   z-index: 999;
 }
 .page5-images img{
-  width: 25vw;
+  width: 100%;
   cursor:grab;
   object-fit: cover;
 }
@@ -430,7 +458,7 @@ nav h4:hover::after{
   min-height: 100vh;
   width: 100%;
   position: relative;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 .page6-top{
   width: 100%;
@@ -438,7 +466,7 @@ nav h4:hover::after{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15vw 2.8vw;
+  padding: 12vw 2.8vw;
   position: relative;
   z-index: 99;
   background-color: #fff;
@@ -466,18 +494,18 @@ nav h4:hover::after{
   background-color: #000;
   color: #fff;
   padding:1vw 2.8vw;
-  padding-top: 2vw;
+  /* padding-top: 2vw; */
   position: relative;
 }
 .endElement-part1{
   display: flex;
   justify-content: space-between;
-  padding-top: 3vw;
+  /* padding-top: 3vw; */
 }
 .end-1{
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+  gap: 3vw;
   align-items: start;
 }
 .end-1 h2{
@@ -530,7 +558,7 @@ nav h4:hover::after{
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  height: 15vw;
+  height: 17vw;
 
 }
 .endElement-part2 .text-2:nth-child(2){
@@ -539,7 +567,7 @@ nav h4:hover::after{
   position: relative;
 }
 
-.text-2 h4::after{
+.text-2:nth-child(2) h4::after{
   content: "";
   position: absolute;
   left: 0;
@@ -558,8 +586,9 @@ nav h4:hover::after{
 }
 .endElement-part3{
   width: 100%;
+  height: fit-content;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
 }
 .endElement-part3 h1{

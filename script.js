@@ -238,3 +238,89 @@ function page6Animation(){
   })
 }
 page6Animation()
+
+  // Get the reference to the circle element
+  // var circle = document.getElementById('myCircle');
+  
+  // // Set the initial angle
+  // var angle = 0;
+
+  // // Define the center of rotation
+  // var centerX = 50;
+  // var centerY = 1;
+
+  // // Define the radius of rotation
+  // var radius = 1;
+
+  // // Define the animation speed
+  // var speed = 1; // Adjust this value to change the speed of rotation
+
+  // // Function to update the position of the circle
+  // function updateCirclePosition() {
+  //   console.log("radius")
+  //   // Calculate the new position based on the angle
+  //   var newX = centerX + radius * Math.cos(angle * Math.PI / 180);
+  //   var newY = centerY + radius * Math.sin(angle * Math.PI / 180);
+
+  //   // Update the circle's position
+  //   circle.setAttribute('cx', newX);
+  //   circle.setAttribute('cy', newY);
+
+  //   // Increment the angle
+  //   angle += speed;
+
+  //   // If the circle has completed a full rotation, reset the angle
+  //   if (angle >= 360) {
+  //     angle -= 360;
+  //   }
+
+  //   // Request the next animation frame
+  //   // requestAnimationFrame(updateCirclePosition);
+  // }
+  
+  
+  var circle = document.getElementById('myCircle');
+
+  function updateCirclePosition() {
+    var angle = 0;
+    var centerX = 50;
+    var centerY = 50;
+    var radius = 49;
+    var speed = .5;
+    function animate() {
+      var newX = centerX + radius * Math.cos(angle * Math.PI / 180);
+      var newY = centerY + radius * Math.sin(angle * Math.PI / 180);
+      circle.setAttribute('cx', newX);
+      circle.setAttribute('cy', newY);
+      angle += speed;
+      if (angle >= 360) {
+        angle -= 360;
+      }
+      requestAnimationFrame(animate);
+      var numbers = document.querySelector(".svgText-part1 h2")
+      var i;
+      for(i=9;i>=0;i--){
+        numbers.textContent=i
+        numbers.innerHTML=`<span>${i}</span>`
+        console.log(numbers.textContent)
+      }
+    }
+    animate();
+  }
+
+  gsap.to(circle, {
+    duration:1,
+    scrollTrigger: {
+      trigger: "#myCircle",
+      scroller: "#main",
+      markers: true,
+      start: "top 60%",
+      end: "top 60%",
+      ease:"none",
+      loop:true,
+      onEnter: function() {
+        updateCirclePosition();
+      }
+    }
+  });
+
